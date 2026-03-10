@@ -126,8 +126,8 @@ class S2SMaskGIT(nn.Module):
         num_decoding_steps: int,
         temperature: float = 1.0,
         top_p: float = 0.85,
-        device: str = "cuda",
     ):
+        device = next(self.parameters()).device
 
         semantic_units = semantic_units.to(device)
 

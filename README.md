@@ -1,5 +1,7 @@
 # Sequence-to-sequence MaskGIT Decoder
 
+[![demo](https://img.shields.io/badge/Demo-Open%20in%20Colab-F9AB00?style=flat&logo=googlecolab&logoColor=F9AB00)](https://colab.research.google.com/github/nicolvisser/S2SMaskGIT/blob/master/demo.ipynb)
+
 A simple model to generate [HuBERT discrete](https://github.com/bshall/hubert) units from coarse semantic tokens (e.g. [ZeroSyl](https://github.com/nicolvisser/ZeroSyl), [SyllableLM](https://github.com/AlanBaade/SyllableLM) or [Sylber](https://github.com/Berkeley-Speech-Group/sylber)) and then vocode to the LJ Speech voice using the decoder from from [Soft-VC](https://github.com/bshall/soft-vc). 
 
 ## Model
@@ -21,7 +23,9 @@ To synthesize audio from these units, we run the sequence-to-sequence [MaskGit](
 
 ## Getting started
 
-See [demo.ipynb](./demo.ipynb).
+See [demo.ipynb](./demo.ipynb) or open in Google Colab:
+
+[![demo](https://img.shields.io/badge/Demo-Open%20in%20Colab-F9AB00?style=flat&logo=googlecolab&logoColor=F9AB00)](https://colab.research.google.com/github/nicolvisser/S2SMaskGIT/blob/master/demo.ipynb)
 
 ## Repo structure
 

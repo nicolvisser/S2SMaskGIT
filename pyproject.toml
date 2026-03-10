@@ -1,0 +1,30 @@
+[project]
+name = "simonsynth"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "nicolvisser",email = "vissernicol@gmail.com"}
+]
+requires-python = ">=3.11,<3.15"
+dependencies = [
+    "torch (>=2.10.0,<3.0.0)",
+    "tqdm (>=4.67.3,<5.0.0)",
+    "wandb (>=0.25.0,<0.26.0)",
+    "numpy (>=2.4.3,<3.0.0)",
+    "torchaudio (>=2.10.0,<3.0.0)",
+    "torchcodec (>=0.10.0,<0.11.0)",
+    "matplotlib (>=3.10.8,<4.0.0)",
+    "zerosyl (>=1.0.5,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "isort (>=8.0.1,<9.0.0)",
+    "black (>=26.3.0,<27.0.0)",
+    "ipykernel (>=7.2.0,<8.0.0)"
+]

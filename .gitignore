@@ -1,0 +1,10 @@
+.venv
+__pycache__
+wandb
+poetry.lock
+output
+checkpoints
+temp
+data
+.vscode
+1272-128104-0000*

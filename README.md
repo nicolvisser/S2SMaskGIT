@@ -23,8 +23,6 @@ To synthesize audio from these units, we run the sequence-to-sequence [MaskGit](
 
 See [demo.ipynb](./demo.ipynb).
 
-[![demo](https://img.shields.io/badge/Demo-Open%20in%20Colab-F9AB00?style=flat&logo=googlecolab&logoColor=F9AB00)](https://colab.research.google.com/github/nicolvisser/S2SMaskGIT/blob/master/demo.ipynb)
-
 ## Repo structure
 
 - [model.py](./model.py) - houses the model

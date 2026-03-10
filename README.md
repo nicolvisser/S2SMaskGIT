@@ -1,5 +1,7 @@
 # Sequence-to-sequence MaskGIT Decoder
 
+[![demo](https://img.shields.io/badge/Demo-Open%20in%20Colab-F9AB00?style=flat&logo=googlecolab&logoColor=F9AB00)](https://colab.research.google.com/github/nicolvisser/S2SMaskGIT/blob/master/demo.ipynb)
+
 A simple model to generate [HuBERT discrete](https://github.com/bshall/hubert) units from coarse semantic tokens (e.g. [ZeroSyl](https://github.com/nicolvisser/ZeroSyl), [SyllableLM](https://github.com/AlanBaade/SyllableLM) or [Sylber](https://github.com/Berkeley-Speech-Group/sylber)) and then vocode to the LJ Speech voice using the decoder from from [Soft-VC](https://github.com/bshall/soft-vc). 
 
 ## Model
@@ -18,6 +20,12 @@ The model predicts a distribution over the masked HuBERT discrete units.
 
 We use the semantic units from [ZeroSyl](https://github.com/nicolvisser/ZeroSyl) as input.
 To synthesize audio from these units, we run the sequence-to-sequence [MaskGit](https://arxiv.org/pdf/2202.04200) decoder to generate [HuBERT discrete](https://github.com/bshall/hubert) units. Then we use the acoustic model (discrete version) from [Soft-VC](https://github.com/bshall/soft-vc) to generate a mel spectrogram in the voice of LJ Speech. Finally we vocode to a waveform using a [16 kHz HiFiGAN](https://github.com/bshall/hifigan) model.
+
+## Getting started
+
+See [demo.ipynb](./demo.ipynb) or open in Colab:
+
+[![demo](https://img.shields.io/badge/Demo-Open%20in%20Colab-F9AB00?style=flat&logo=googlecolab&logoColor=F9AB00)](https://colab.research.google.com/github/nicolvisser/S2SMaskGIT/blob/master/demo.ipynb)
 
 ## Repo structure
 

@@ -3,8 +3,6 @@ import torchaudio
 from IPython.display import Audio, display
 from zerosyl import ZeroSylCollapsed
 
-from model import S2SMaskGIT
-
 # wget https://storage.googleapis.com/zerospeech-checkpoints/samples/1272-128104-0000.flac
 waveform_path = "1272-128104-0000.flac"
 num_decoding_steps = 10
@@ -16,8 +14,9 @@ wav, sr = torchaudio.load(waveform_path)
 
 zerosyl = ZeroSylCollapsed.from_remote()
 
-maskgit = S2SMaskGIT.from_remote().to(device)
-maskgit.eval()
+maskgit = torch.hub.load(
+    "nicolvisser/S2SMaskGIT:maskter", "s2smaskgit", trust_repo=True
+).to(device)
 
 acoustic = torch.hub.load(
     "bshall/acoustic-model:main", "hubert_discrete", trust_repo=True

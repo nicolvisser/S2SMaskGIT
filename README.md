@@ -7,7 +7,7 @@ A simple model to generate [HuBERT discrete](https://github.com/bshall/hubert) u
 ![MaskGIT Model](maskgit_model.svg)
 
 Under the hood the model is a transformer with bidirectional attention.
-Tokens are masked following a [MaskGIT](https://arxiv.org/pdf/2202.04200) schedule.
+[HuBERT discrete](https://github.com/bshall/hubert) units are masked following a [MaskGIT](https://arxiv.org/pdf/2202.04200) schedule.
 Both the coarse semantic units and [HuBERT discrete](https://github.com/bshall/hubert) units are embedded.
 The embeddings are combined and positional encoding is added both for global positions (sinusoidal positional embeddings) and within-segment positions (learned positional embeddings).
 The model predicts a distribution over the masked HuBERT discrete units.

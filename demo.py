@@ -15,7 +15,7 @@ wav, sr = torchaudio.load(waveform_path)
 zerosyl = ZeroSylCollapsed.from_remote()
 
 maskgit = torch.hub.load(
-    "nicolvisser/S2SMaskGIT:maskter", "s2smaskgit", trust_repo=True
+    "nicolvisser/S2SMaskGIT:master", "s2smaskgit", trust_repo=True
 ).to(device)
 
 acoustic = torch.hub.load(

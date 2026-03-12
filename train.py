@@ -120,8 +120,8 @@ class AlignedSemanticAndAcousticUnitsDataset(Dataset):
 
     def collate_fn(
         self,
-        batch: List[torch.Tensor, torch.Tensor],
-    ) -> Tuple[torch.Tensor, torch.Tensor, List[int]]:
+        batch: List[Tuple[torch.Tensor, torch.Tensor, torch.Tensor]],
+    ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
         semantic_units, acoustic_units, mask = zip(*batch)
         seqlens = torch.tensor([len(su) for su in semantic_units]).long()
 
